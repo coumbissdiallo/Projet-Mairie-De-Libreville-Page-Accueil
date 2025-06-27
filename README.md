@@ -41,7 +41,7 @@ Ce dépôt GitHub servira à coordonner tout le travail de manière organisée.
 ## 🚀 Démarrage du projet
 
 1. **Cloner le projet**
-   git clone https://github.com/ton-utilisateur/site-accueil-projet.git
+   git clone https://github.com/coumbissdiallo/Projet-Mairie-De-Libreville-Page-Accueil
    cd site-accueil-projet
 
 2. **Se positionner sur la branche commune**
