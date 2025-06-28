@@ -36,6 +36,125 @@
         <!--Actualités-droite-->
         <section>
             <!--pichat_gauche-->
+ <!-- Titre ACTUALITÉS -->
+ <div class="d-flex align-items-center entete-actualites">
+    <h4 class="fw-bold text-uppercase m-0">Actualites</h4>
+    <div class="points-colorés d-flex align-items-center">
+      <span class="point-vert"></span>
+      <span class="point-jaune"></span>
+      <span class="point-bleu"></span>
+    </div>
+  </div>
+
+  <!-- Barre de filtres -->
+  <div class="filtre-bar d-flex align-items-center gap-4">
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+            <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+      <button class="btn btn-link">Cette semaine</button>
+    </div>
+    <div><button class="btn dropdown-toggle">Ce mois ci</button></div>
+    <div><button class="btn dropdown-toggle">Le mois dernier</button></div>
+  </div>
+
+  <!-- Contenu -->
+  <div class="row">
+    <!-- Cartes d'actualités -->
+    <div class="col-md-8">
+      <div class="col-sm-6 col-lg-4">
+        <div class="actualite-card">
+          <div class="actualite-img-container">
+            <img src="assets/image1.png" class="actualite-img" alt="" />
+            <span class="date-badge">28/06/2025</span>
+          </div>
+          <div class="card-content">
+            
+            <p> Lorem ipsum Lorem ipsum Lorem 
+                ipsum Lorem ipsumLorem ipsum Lorem 
+                ipsum Lorem ipsum Lorem ipsum 
+                Lorem ipsum</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="actualite-card">
+          <div class="actualite-img-container">
+            <img src="assets/image1.png" class="actualite-img" alt="" />
+            <span class="date-badge">28/06/2025</span>
+          </div>
+          <div class="card-content">
+            <p> Lorem ipsum Lorem ipsum Lorem 
+                ipsum Lorem ipsumLorem ipsum Lorem 
+                ipsum Lorem ipsum Lorem ipsum 
+                Lorem ipsum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendrier -->
+    <div class="col-md-4">
+      <div class="mini-calendar">
+        <h5 id="calendar-month-year">JUIN 2025</h5>
+        <div class="days-header">
+          <div>DIM</div>
+          <div>SEL</div>
+          <div>RAD</div>
+          <div>KAM</div>
+          <div>JUN</div>
+          <div>JUM</div>
+          <div>SAB</div>
+        </div>
+        <div class="days-grid" id="calendar-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const calendarGrid = document.getElementById("calendar-grid");
+    const monthYear = document.getElementById("calendar-month-year");
+
+    const now = new Date();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
+
+    const monthNames = [
+      "JANVIER",
+      "FÉVRIER",
+      "MARS",
+      "AVRIL",
+      "MAI",
+      "JUIN",
+      "JUILLET",
+      "AOÛT",
+      "SEPTEMBRE",
+      "OCTOBRE",
+      "NOVEMBRE",
+      "DÉCEMBRE",
+    ];
+
+    monthYear.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    calendarGrid.innerHTML = "";
+
+    for (let i = 0; i < firstDay; i++) {
+      const empty = document.createElement("div");
+      calendarGrid.appendChild(empty);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const cell = document.createElement("div");
+      if (d === 28) cell.classList.add("highlight-28");
+      cell.textContent = d;
+      calendarGrid.appendChild(cell);
+    }
+  </script>
 
 
 
