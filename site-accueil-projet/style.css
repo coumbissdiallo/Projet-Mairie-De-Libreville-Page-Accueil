@@ -1,0 +1,126 @@
+/*header*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.top-bar {
+  background-color: #aee0c3c9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.top-bar .logo {
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a,
+.dropbtn {
+  text-decoration: none;
+  color: rgb(14, 13, 13);
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #eee;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  background: white;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.hero .ligne{
+  border: none;
+  height: 2px;
+  background-color: aqua;
+  width: 20%;
+  margin: 20px auto;
+}
+
+
+
+
+
+
+
+
+/*badge*/
+
+
+
+
+
+
+
+
+
+/*secton-ville*/
+
+
+
+
+
+
+
+
+
+
+/*actualités */
+
+
+
+
+
+/*geston_ville*/
+
+
+
+
+
+
+
+/*footer*/
